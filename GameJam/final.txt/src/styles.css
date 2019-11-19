@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.visor {
+    width: 208px;
+}
+
+body[type="page"] {
+    margin: 20px;
+    padding: auto;
+    text-align: center;
+    /*
+    background-image: url(https://media.giphy.com/media/gSxj0I2b2EMCc/giphy.gif);
+    animation: animatedBackground 20s linear infinite,
+             colorShift 5s linear infinite;
+    */
+}
+
+
+@keyframes slideInFromLeft {
+    0%,90% {
+      transform: translateX(-200%);
+      display: none;
+      width:0px;
+      height:0px;
+    }
+    100% {
+      transform: translateX(0);
+      display: block;
+      width:800px;
+      height:600px;
+    }
+  }
+  
+  canvas {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 9s ease-out 0s 1 slideInFromLeft;
+    
+    background: #333;
+  }
+
+@keyframes intro {
+    0%,100%   {background-color:white;
+      color:white; 
+      left:0px; 
+      top:0px;
+      text-shadow:
+        3px 3px 0 white,
+      -1px -1px 0 white,  
+       1px -1px 0 white,
+       -1px 1px 0 white,
+        1px 1px 0 white;}
+    40%,60%  {background-color:rgb(114, 0, 0);text-shadow:
+        3px 3px 0 rgb(114, 0, 0),
+      -1px -1px 0 rgb(114, 0, 0),  
+       1px -1px 0 rgb(114, 0, 0),
+       -1px 1px 0 rgb(114, 0, 0),
+        1px 1px 0 rgb(114, 0, 0);color: rgb(114, 0, 0); left:200px; top:50px;width:300px;height:100px;}
+    45%,55% {
+        background-color:rgb(114, 0, 0);
+        color: white;
+        border-radius: 20px;
+        border: 10px solid rgb(235, 2, 2);
+        box-shadow: 5px 5px 6px rgba(black, 0.15);
+        left:200px; top:50px;
+        width:300px;
+        height:100px;
+        text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes intro {
+    0%,100%   {background-color:white; left:0px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+  }  
+
+/* The element to apply the animation to */
+div {
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color:white;
+    animation-name: intro;
+    animation-duration: 8s;
+}
+
+h2 {
+    align-content: center;
+    text-transform: capitalize;
+    padding: 20px;
+    text-align: center;
+}

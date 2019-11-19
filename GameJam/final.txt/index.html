@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title> Metro Hunter </title>
+    <meta charset='UTF-8'/>
+    <link rel="stylesheet" href="./src/styles.css"> 
+    
+
+    <style>
+    
+      #gameScreen{
+        border: 1px solid black;
+        padding: 0;
+      }
+
+      img{
+        display: none;
+      }
+    
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <canvas id = "gameScreen" width="800" height="600"></canvas>
+    <div><h2>Subway Hunters</h2></div>
+
+    <script>
+    let cx = document.querySelector("gameScreen").getContext("2d");
+    cx.initStart();
+    </script>
+    
+    <script src="./src/inputHandler.js"></script>
+    <script src="./src/char.js"></script>
+    <script src="./src/mob.js"></script>
+    <script src="./src/lifebar.js"></script>
+    <script src="./src/actionMenu.js"></script>
+
+    <script src="./src/levels.js"></script>
+    <script src="./src/roundsystem.js"></script>
+    <script src="./src/game.js"></script>
+    <script src="./src/index.js"></script>
+
+    <script src="./src/sprite.js"></script>
+    <script src="./src/start.js"></script>
+    
+
+  </body>
+
+</html>
